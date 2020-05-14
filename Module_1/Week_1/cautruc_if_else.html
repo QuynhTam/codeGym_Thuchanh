@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let userName = prompt("khai báo tên họ đê");
+      if (userName == "Admin") {
+        let passWord = prompt("Nhập pass đê");
+        if (passWord == "TheMaster") {
+          alert("Wellcome");
+        } else if (passWord == null) {
+          alert("canceled");
+        } else alert("Wrong password");
+      } else if (userName == null) alert("canceled");
+      else alert("i don't know you");
+    </script>
+  </body>
+</html>

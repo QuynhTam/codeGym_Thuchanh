@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .doitien {
+        float: left;
+        margin: 10px;
+        border: 1px solid black;
+      }
+      h3 {
+        text-align: center;
+      }
+      .op {
+        width: 154px;
+      }
+      .aa {
+        height: 30px;
+      }
+      input{
+          text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="doitien">
+      <h3>Amount</h3>
+      <input type="text" id="input" />
+    </div>
+    <div class="doitien">
+      <h3>From Currency</h3>
+      <select id="tFrom" class="op">
+        <option value="vn1">VNĐ</option>
+        <option value="usd1">USD</option>
+      </select>
+    </div>
+    <div class="doitien">
+      <h3>To Currency</h3>
+      <select id="tTo" class="op">
+        <option value="vn2">VNĐ</option>
+        <option value="usd2">USD</option>
+      </select>
+    </div>
+    <div class="doitien">
+      <h3>Result</h3>
+      <input type="text" id="ouput" />
+    </div>
+    <br /><br />
+    <button id="button" onclick="converts()">Click me</button>
+    </label>
+    <script>
+      function converts() {
+        let dauvao = document.getElementById("input").value;
+        let fromTo = document.getElementById("tFrom").value;
+        let toFrom = document.getElementById("tTo").value;
+
+        if (fromTo == "vn1") {
+          if (toFrom == "vn2") {
+            document.getElementById("ouput").value = dauvao + " VNĐ";
+          } else {
+            document.getElementById("ouput").value = dauvao / 23000 + " USD";
+          }
+        } else if (toFrom == "vn2") {
+          document.getElementById("ouput").value = dauvao * 23000 + " VNĐ";
+        } else {
+          document.getElementById("ouput").value = dauvao + " USD";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!-- Viết chương trình nhập một giá trị là độ 0C (Celsius) và chuyển nó sang độ 0F (Fahrenheit). [Hướng dẫn: C/5 = (F-32)/9] -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>ĐỘ C</h1>
+    <input type="text" name="" id="doc" />
+    <h1>"=>"</h1>
+    <h1>ĐỘ F</h1>
+    <input type="text" name="" id="dof" />
+    <script>
+      let tc = prompt("Mời nhập vào độ C");
+      document.getElementById("doc").value = tc;
+      let tf = (9 * tc + 160) / 5;
+      document.getElementById("dof").value = tf;
+    </script>
+  </body>
+</html>

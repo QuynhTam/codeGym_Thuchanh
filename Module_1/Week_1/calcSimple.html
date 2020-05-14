@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .btn {
+        width: 50px;
+        height: 45px;
+        margin: 5px 0px 0px 0px;
+      }
+      .btna {
+        height: 99px;
+        width: 50px;
+        margin: 5px 0px 0px 0px;
+      }
+
+      .btnb {
+        height: 45px;
+        width: 105px;
+        margin: 5px 0px 0px 0px;
+      }
+      #aa {
+        width: 260px;
+        height: 40px;
+        margin: 5px;
+        text-align: right;
+      }
+      #khung {
+        width: 273px;
+        border: 1px solid black;
+        background-color: #808080;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="khung">
+      <input type="text" id="aa" />
+      <table>
+        <td>
+          <input
+            class="btn"
+            type="button"
+            value="7"
+            onclick="aa.value+=this.value"
+          />
+        </td>
+        <td>
+          <input
+            class="btn"
+            type="button"
+            value="8"
+            onclick="aa.value+=this.value"
+          />
+        </td>
+        <td>
+          <input
+            class="btn"
+            type="button"
+            value="9"
+            onclick="aa.value+=this.value"
+          />
+        </td>
+        <td>
+          <input
+            class="btn"
+            type="button"
+            value="/"
+            onclick="aa.value+=this.value"
+          />
+        </td>
+        <td>
+          <input
+            class="btn"
+            type="button"
+            value="Del"
+            onclick="aa.value=aa.value.substr(0,aa.value.length-1)"
+          />
+        </td>
+        <tr>
+          <td>
+            <input
+              class="btn"
+              type="button"
+              value="4"
+              onclick="aa.value+=this.value"
+            />
+          </td>
+          <td>
+            <input
+              class="btn"
+              type="button"
+              value="5"
+              onclick="aa.value+=this.value"
+            />
+          </td>
+          <td>
+            <input
+              class="btn"
+              type="button"
+              value="6"
+              onclick="aa.value+=this.value"
+            />
+          </td>
+          <td>
+            <input
+              class="btn"
+              type="button"
+              value="*"
+              onclick="aa.value+=this.value"
+            />
+          </td>
+          <td>
+            <input class="btn" type="button" value="C" onclick="aa.value=''" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input
+              class="btn"
+              type="button"
+              value="1"
+              onclick="aa.value+=this.value"
+            />
+          </td>
+          <td>
+            <input
+              class="btn"
+              type="button"
+              value="2"
+              onclick="aa.value+=this.value"
+            />
+          </td>
+          <td>
+            <input
+              class="btn"
+              type="button"
+              value="3"
+              onclick="aa.value+=this.value"
+            />
+          </td>
+          <td>
+            <input
+              class="btn"
+              type="button"
+              value="+"
+              onclick="aa.value+=this.value"
+            />
+          </td>
+          <td rowspan="2">
+            <input
+              class="btna"
+              type="button"
+              value="="
+              onclick="aa.value=eval(aa.value)"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <input
+              class="btnb"
+              type="button"
+              value="0"
+              onclick="aa.value+=this.value"
+            />
+          </td>
+          <td>
+            <input
+              class="btn"
+              type="button"
+              value="."
+              onclick="aa.value+=this.value"
+            />
+          </td>
+          <td>
+            <input
+              class="btn"
+              type="button"
+              value="-"
+              onclick="aa.value+=this.value"
+            />
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

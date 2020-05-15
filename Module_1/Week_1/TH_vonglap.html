@@ -6,8 +6,8 @@
     <title>Document</title>
   </head>
   <body>
-      <!-- vòng lặp for -->
-    <!-- <script>
+    <!-- vòng lặp for -->
+    <script>
       let stable = "<table  border='1' width='300' cellspacing=0 >";
       for (let i = 1; i <= 10; i++) {
         stable = stable + "<tr>";
@@ -18,10 +18,23 @@
       }
       stable = stable + "</table>";
       document.write(stable);
-    </script> -->
-<script>
-    let i=1,j=1;
-    let tables="<table border=1 >"
-</script>
+    </script>
+    <!-- vòng lặp while -->
+    <script>
+      let i = 1,j=1;
+      let drawTable = "<table border=1 width= '400' cellspacing=0>";
+      while (i <= 10) {
+        drawTable = drawTable + "<tr>";
+        j = 1;
+        while (j <= 10) {
+          drawTable = drawTable + "<td>" + i * j + "</td>";
+          j++;
+        }
+        drawTable = drawTable + "</tr>";
+        i++;
+      }
+      drawTable = drawTable + "</table>";
+      document.write(drawTable);
+    </script>
   </body>
 </html>

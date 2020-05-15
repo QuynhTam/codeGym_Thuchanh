@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   let f0 = 0;
+      //   let f1 = 1;
+      //   let fn;
+      //   document.write(f0 + " " + f1);
+      //   let n = prompt("Nhập n : ");
+      //   for (let i = 2; i <= n; i++) {
+      //     fn = f1 + f0;
+      //     document.write(" " + fn);
+      //     f0 = f1;
+      //     f1 = fn;
+      //   }
+      // đệ quy
+      let fi = parseInt(prompt("Nhập vào số lượng số Fibonaci cần in : "));
+      for (let i = 0; i < fi; i++) {
+        document.write(fibonaci(i) + " ");
+      }
+      function fibonaci(n) {
+        if (n == 0 || n == 1) {
+          return n;
+        } else {
+          return fibonaci(n - 1) + fibonaci(n - 2);
+        }
+      }
+    </script>
+  </body>
+</html>

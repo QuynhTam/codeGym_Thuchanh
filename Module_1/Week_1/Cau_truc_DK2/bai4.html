@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let a = parseInt(prompt("Nhập a"));
+      let b = parseInt(prompt("Nhập b"));
+      let c = parseInt(prompt("Nhập c"));
+      let d = b*b - 4*a*c;
+      if (d < 0)
+       {
+       document.write("phương trình vô nghiệm");
+      }
+       else if (d == 0) 
+      {
+        document.write("phương trình có nghiệm kép : X= " + (-b /(2*a )));
+      }
+       else
+       {
+        let x1 =(-b + Math.sqrt(d) )/ (2*a);
+        let x2 =(-b - Math.sqrt(d) )/ (2*a);
+        document.write("Phương trình có 2 nghiệm phân biệt X1= "+x1+ " và X2= "+x2);     
+      }
+    </script>
+  </body>
+</html>

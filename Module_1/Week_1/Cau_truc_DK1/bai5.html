@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let score_1 =parseInt (prompt("Nhập điểm kiểm tra"));
+      let score_2 =parseInt (prompt("Nhập điểm thi giữa kì"));
+      let score_3 =parseInt( prompt("Nhập điểm thi học kì"));
+      let score_tb = (score_1 + score_2 + score_3) / 3;
+      if (score_tb > 9) {
+        alert("Bạn học xuất sắc quá !!!");
+      } else if (score_tb > 8) {
+        alert("Bạn học giỏi !!!");
+      } else if (score_tb > 7) {
+        alert("Bạn học khá");
+      } else if (score_tb) {
+        alert("Bạn học trung bình");
+      } else {
+        alert("Bạn học hơi kém");
+      }
+    </script>
+  </body>
+</html>

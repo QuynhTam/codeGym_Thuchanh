@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let salary = parseInt(prompt("Nhập lương"));
+      let thue;
+      let thucnhan;
+      if (salary > 30) {
+        thue = salary * 0.3;
+        thucnhan = salary - thue;
+        alert("Lương: " + salary + " Thuế: " + thue + " Thực Nhận: " + thucnhan);
+      } else if (salary > 15) {
+        thue = salary * 0.2;
+        thucnhan = salary - thue;
+        alert("Lương: " + salary + " Thuế: " + thue + " Thực Nhận: " + thucnhan);
+      } else if (salary > 9) {
+        thue = salary * 0.1;
+        thucnhan = salary - thue;
+        alert("Lương: " + salary + " Thuế: " + thue + " Thực Nhận: " + thucnhan);
+      } else {
+        alert("Bạn chưa phải chịu thuế");
+      }
+    </script>
+  </body>
+</html>

@@ -8,16 +8,16 @@
   <body>
     <!-- vòng lặp for -->
     <script>
-      let stable = "<table  border='1' width='300' cellspacing=0 >";
+      let drawTable = "<table  border='1' width='300' cellspacing=0 >";
       for (let i = 1; i <= 10; i++) {
-        stable = stable + "<tr>";
+        drawTable = drawTable + "<tr>";
         for (let j = 1; j <= 10; j++) {
-          stable = stable + "<td>" + i * j + "</td>";
+          drawTable = drawTable + "<td>" + i * j + "</td>";
         }
-        stable = stable + "</tr>";
+        drawTable = drawTable + "</tr>";
       }
-      stable = stable + "</table>";
-      document.write(stable);
+      drawTable = drawTable + "</table>";
+      document.write(drawTable);
     </script>
     <!-- vòng lặp while -->
     <script>

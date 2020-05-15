@@ -1,0 +1,27 @@
+<!-- Viết chương trình tính tiền điện với chỉ số mới và chỉ số cũ Được nhập vào từ
+bàn phím. In ra màn hình chỉ số cũ, chỉ số mới và số tiền phải trả. Biết rằng
+100 kWh đầu giá 1000, từ kWh 101 – 150 giá 1200, từ kWh 151 – 200 giá 2000, từ
+201 trở lên giá 2500. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let inputOld = prompt("Nhập chỉ số cũ : ");
+      let inputNew = prompt("Nhập chỉ số mới: ");
+      let sodien = inputNew - inputOld;
+      if(sodien<=100){
+        document.write("Tiền điện của "+sodien+"kWh là : "+(sodien*1000).toLocaleString() +" VNĐ" );
+      }else if(sodien<=150){
+        document.write("Tiền điện của "+sodien+"kWh là : "+((100*1000)+(sodien-101)*1200).toLocaleString() +" VNĐ" );
+      }else if(sodien<=200){
+        document.write("Tiền điện của "+sodien+"kWh là : "+((100*1000)+(sodien-151)*2000).toLocaleString() +" VNĐ" );
+      }else
+        document.write("Tiền điện của "+sodien+"kWh là : "+((100*1000)+(50*1200)+(50*2000)+(sodien-201)*2500).toLocaleString() +" VNĐ" );
+    </script>
+  </body>
+</html>

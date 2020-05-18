@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  Bài 3: In tam giác vuông. Các góc vuông nằm ở các vị trí khác nhau
+  <hr />
+  <body>
+    <script>
+      for (let i = 1; i <= 7; i++) {
+        for (let j = 1; j <= i; j++) {
+          document.write(" * ");
+        }
+        document.write("<br>");
+      }
+      document.write("<hr>");
+      for (let i = 1; i <= 7; i++) {
+        for (let j = 7; j >= i; j--) {
+          document.write(" * ");
+        }
+        document.write("</br>");
+      }
+      document.write("<hr>");
+      for (let i = 1; i <= 7; i++) {
+        for (let j = 1; j <= i; j++) {
+          document.write(" &ensp;");
+        }
+        for (j = i; j <= 7; j++) {
+          document.write("  *");
+        }
+        document.write("</br>");
+      }
+      document.write("<hr>");
+      for(let i=1;i<=7;i++){
+          for(j=7;j>=i;j--){
+              document.write(" &ensp; ");
+          }
+          for(j=1;j<=i;j++){
+              document.write(" * ")
+          }
+          document.write("</br>");
+      }
+    </script>
+  </body>
+</html>

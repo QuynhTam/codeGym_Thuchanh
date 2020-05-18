@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 style="color: red;">Game Đoán Số</h1>
+    <input type="button" onclick="gameDoannSo()" value="Click me!" />
+    <script>
+      function gameDoannSo() {
+        let m = prompt("Bạn muốn đoán trong khoảng nào !");
+        let dem = 0;
+        do{
+          let answer = prompt("Nhập số mà bạn muốn đoán ");
+          let random = Math.floor(Math.random() * m);
+          if (answer == random) {
+            alert("Congratulations ! You are win ");
+          } else {
+            alert("You are lose ! Answer is : " + random);
+            dem++;
+          }
+        }while(dem<2||answer==random)
+      }
+    </script>
+  </body>
+</html>

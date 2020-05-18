@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let i = 0;
+      let sum = 0;
+      document.write("<h4>20 số fibonaci đầu tiên là : </h4>");
+      while (i < 20) {
+        document.write(fibonaci(i) + " ");
+        sum += fibonaci(i);
+        i++;
+      }
+      document.write("</br><hr>Tổng 20 số fibonaci đầu tiên là : " + sum);
+      function fibonaci(n) {
+        let f0 = 0;
+        let f1 = 1;
+        let fn;
+        if (n<2) 
+          return n;
+        else {
+          for (let i = 1; i < n; i++) {
+            fn = f0 + f1;
+            f0 = f1;
+            f1 = fn;
+          }
+          return fn;
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n=prompt();
+        document.write("Kí tự Bạn vừa nhập là ("+ n +") kí tự này là số :  ");
+        document.write(checkIsNaN(n));
+        function checkIsNaN(n){
+            if(isNaN(n))
+            return false;
+            else
+            return true;
+        }
+    </script>
+</body>
+</html>

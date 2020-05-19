@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let a = prompt();
+      let b = prompt();
+      let c = prompt();
+      document.write("3 số bạn vừa nhập là " +a + " " + b + " " + c + " Số nhỏ nhất là : " + minMax(a, b, c) );
+      function minMax(a, b, c) {
+        let min = a;
+        if (min > b) {
+          if (b > c) {
+            min = c;
+          } else {
+            min = b;
+          }
+        } else if (min < c) {
+          min = a;
+        } else min = c;
+        return min;
+      }
+    </script>
+  </body>
+</html>

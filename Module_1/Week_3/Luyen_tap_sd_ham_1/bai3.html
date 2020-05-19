@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let input=prompt("Nhập vào Ngôi sao nèo !");
+        seachStar(input);
+        function seachStar(inputs){
+        let arr2=["UrsaMinor", "Tarurus", "Cygnus", "Lyra", "Aquila", "UrsaMajor" , "Leo"];
+        let arr1=[ "Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe" , "Regulus"];
+            for(let i=0;i<arr1.length;i++){
+                if(inputs==arr1[i]){
+                alert("Chom sao tuong ung la "+arr2[i]);
+                break;
+                }else{
+                alert("Nothing else !");
+                }
+            }
+        }
+    </script>
+</body>
+</html>

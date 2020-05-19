@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let m=prompt("Khỏi tạo mảng gồm bao nhiêu số ?");
+        arrNumber(m);
+        function arrNumber(m){
+            let arrNumber=[];
+            for(let i=0;i<m;i++){
+                let elementArr=prompt();
+                arrNumber.push(elementArr);
+            }
+            document.write("Mảng vừa tạo là :"+arrNumber + " <br>");
+            arrNumber.reverse();
+            document.write("Mảng sau khi đc đảo ngược là : " + arrNumber);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let input = parseInt(prompt("Nhập số phần tử"));
+      arrNumber(input);
+      function arrNumber(n) {
+        let mang = [];
+        for (let i = 0; i < n; i++) {
+          let Nhap = parseInt(prompt("Phần tử thứ " + i));
+          mang.push(Nhap);
+        }
+        document.write("Mảng vừa nhập là " + mang + " ");
+        let max = mang[0];
+        for (let j = 1; j < mang.length; j++) {
+          if (mang[j] > max) {
+            max = mang[j];
+          }
+        }
+        document.write("Giá trị lớn nhất trong mảng là :" + max);
+      }
+    </script>
+  </body>
+</html>

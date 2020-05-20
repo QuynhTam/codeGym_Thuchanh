@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Chuyển đổi nhiệt độ</h1>
+    <h3>Độ F</h3>
+    <input type="number" placeholder="Độ F" id="dof" oninput="doiNhietDo(document.getElementById('dof').value)"/>
+    <h3>Độ C</h3>
+    <input type="number" placeholder="Độ C" name="" id="doc" />
+    <script>
+      function doiNhietDo(a) {
+        document.getElementById((id = "doc")).value = (a - 32) / 1.8;
+      }
+    </script>
+  </body>
+</html>

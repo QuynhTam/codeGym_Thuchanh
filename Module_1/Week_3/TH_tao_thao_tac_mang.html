@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Sample Screen</h1>
+    <input type="text" name="" id="inputs" />
+    <input type="button" value="Add" onclick="addElementToArray()" />
+    <input type="button" value="Display" onclick="displayArray()" />
+    <hr />
+    <h3><div id="displays"></div></h3>
+    <script>
+      let arrays = [];
+      function addElementToArray() {
+        let a = document.getElementById("inputs").value;
+        arrays.push(a);
+        document.getElementById("inputs").value="";
+      }
+      function displayArray() {
+        let e;
+        for (let i = 0; i < arrays.length; i++) {
+          e += "Element " + i + " = " + arrays[i] + "<br/>";
+        }
+        document.getElementById("displays").innerHTML = e;
+      }
+    </script>
+  </body>
+</html>

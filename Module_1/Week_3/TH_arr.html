@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //  Bài 1: Viết một chương trình Javascript để nối tất cả các phần tử trong một mảng chuỗi lại với nhau
+      //   let myColor = ["Red", "Green", "White", "Black"];
+      //   myColor.join();
+      //   document.write(myColor);
+      //   Bài 2: Viết một chương trình nhận một số nhập vào và chèn dấu (-) giữa 2  số chẵn.
+      // let input = prompt("Nhập Số ");
+      // let arr = input.toString();
+      // let kq=[arr[0]];
+      // for (let i = 1; i < arr.length; i++) {
+      //   if ((arr[i-1] % 2 == 0) && (arr[i] % 2 == 0)) {
+      //       kq.push("-",arr[i]);
+      //   }else{
+      //       kq.push(arr[i]);
+      //   }
+      // }
+      //   document.write(kq.join(""));
+      // Bài 3: Viết một chương trình nhập vào một chuỗi và chuyển các ký tự chữ thường trong chuỗi vừa nhập sang thành dạng chữ hoa.
+     let str = prompt('nhập dãy muốn đổi');
+    let a = 'AĂÂBCDĐEÊFGHIJKLMNOƠÔPQRSTUVWXYZ';
+    let b = 'aăâbcdđeêfghijklmnoơôpqrstuvwxyz';
+    let result = [];
+
+    for(let i=0; i<str.length; i++)
+    {
+        if(a.indexOf(str[i]) !== -1)
+        {
+            result.push(str[i].toLowerCase());
+        }
+        else if(b.indexOf(str[i]) !== -1)
+        {
+            result.push(str[i].toUpperCase());
+        }
+        else
+        {
+            result.push(str[i]);
+        }
+    }
+    document.write(result.join(''));
+
+    </script>
+  </body>
+</html>
+
+    

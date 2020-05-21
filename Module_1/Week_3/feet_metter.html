@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+      <input type="text" name="" id="input">
+      <input type="button" onclick="feet_convert(document.getElementById('input').value);" value="Feet_Convert">
+      <input type="button" onclick="metter_convert(document.getElementById('input').value);" value="Metter_Convert">
+      <input type="text" name="" id="output">
+    <script>
+      function feet_convert(a) {
+        let feet = 3.279 * a;
+        document.getElementById("output").value=feet
+      }
+      function metter_convert(b) {
+        let mettter = 0.305 * b;
+        document.getElementById("output").value=mettter
+
+      }
+
+    </script>
+  </body>
+</html>

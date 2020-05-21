@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arr = [];
+      for (let i = 0; i < 5; i++) {
+        let n = prompt("Nhập vào phần tử thứ " + i);
+        arr.push(n);
+      }
+      document.write("Mảng vừa nhập là : " + arr);
+      let input = prompt("Nhập vào phần tử cần xoá :");
+      for (let i = 0; i < arr.length; i++) {
+        if (input == arr[i]) {
+          arr[i]=arr[i+1];
+          for (let j = i; j < arr.length; j++) {
+            arr[j] = arr[j + 1];
+          }
+          arr[arr.length - 1] = 0;
+        }
+      }
+      document.write("Mảng sau khi xoá là : " + arr);
+    </script>
+  </body>
+</html>

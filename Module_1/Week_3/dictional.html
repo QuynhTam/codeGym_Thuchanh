@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let input = prompt("Nhập từ cần tra cứu : ");
+      let arr_En = ["home", "human", "king", "funy", "computer", "jump"];
+      let arr_Vi = ["nhà", "con người", "vua", "vui vẻ", "máy tính", "nhảy"];
+      let output = false;
+      for (let i = 0; i < arr_En.length; i++) {
+        if (input == arr_En[i]) {
+          output = true;
+          alert(input + " có nghĩa là : " + arr_Vi[i]);
+        }
+      }
+      if (output) alert("Nothing else !");
+    </script>
+  </body>
+</html>

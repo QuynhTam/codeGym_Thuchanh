@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let n = prompt("Nhập số phần tử");
+      let arr = [];
+      for (let i = 0; i < n; i++) {
+        let b = prompt("Phần tử thứ " + i);
+        arr.push(b);
+      }
+      document.write("Mảng vừa tạo là " + arr);
+      document.write("<br>Mảng sau khi đảo ngược là " + arr.reverse());
+    </script>
+  </body>
+</html>

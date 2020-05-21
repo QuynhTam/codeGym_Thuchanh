@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let n = prompt("Nhập số lượng phần tử :");
+      let arr = [];
+      let arr_TBC;
+      let arr_Sum = 0;
+      let vt = 0;
+      for (let i = 0; i < n; i++) {
+        let a =parseInt(prompt("Nhập Phần tử thứ " + i));
+        arr.push(a);
+      }
+      document.write("Mảng vừa nhập là  : " + arr);
+      document.write("<hr>");
+      let max = arr[0];
+      for (let i = 0; i < arr.length; i++) {
+        if (max < arr[i]) {
+          max = arr[i];
+          vt = i;
+        }
+        arr_Sum += arr[i];
+      }
+      arr_TBC = (arr_Sum / arr.length);
+      document.write("Số lớn nhất là " + max + " vị trí thứ " + vt);
+      document.write("<hr>");
+      document.write("Tbc của các phần tử trong mảng là " + arr_TBC);
+    </script>
+  </body>
+</html>

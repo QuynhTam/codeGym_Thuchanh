@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let b = [];
+      for (i = 0; i < 10; i++) {
+        let input = prompt("Nhập vào phần tử");
+        b.push(input);
+      }
+      document.write("<br> Mảng vừa nhập là <br>" + b);
+      let max=b[0];
+      let vt=0;
+      for (i = 1; i < 10; i++) {
+        if (max < b[i]) {
+          max = b[i];
+          vt=i;
+        }
+      }
+      document.write(" <br> Phần tử lớn nhất mảng là <br>" + max + "<br> Ở vị trí thứ <br>" + vt);
+    </script>
+  </body>
+</html>

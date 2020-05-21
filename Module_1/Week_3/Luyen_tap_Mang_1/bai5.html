@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Bài 5- Viết chương trình đếm số nguyên âm trong một chuỗi
+    <script>
+        let m=prompt("Nhập vào số lưỢng phần tử");
+        let arr=[];
+        let dem=0;
+        for(let i=0; i<m;i++){
+        let n=prompt("Nhập vào phần tử thứ "+i);
+        arr.push(n);
+        }
+        document.write("Mảng vừa nhập vào là "+arr);
+        for(let i=0;i<arr.length;i++){
+            if(arr[i]<0){
+                dem++;
+            }
+        }
+        if(dem>0)
+        document.write("<br/>Số phần tử âm trong mảng là "+dem);
+        else
+        document.write("<br/>Không có phần tử âm nào trong mảng");
+
+    </script>
+</body>
+</html>

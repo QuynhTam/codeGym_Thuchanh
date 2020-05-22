@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Type anything slowly</h1>
+    <textarea name="codeGym" id="textnhap" cols="50" rows="10" onkeydown="typeTextarea()"></textarea>
+    <script>
+   let a=["T","Ô","I"," ","L","À"," ","N","G","U","Y","Ễ","N"," ","N","G","Ọ","C"," ","Q","U","Ỳ","N","H"];
+   function typeTextarea(){
+    let x=document.getElementById("textnhap").value;
+    let n="";
+        for(let i=0;i<x.length;i++){
+            n=n+a[i];
+            if(i==24){
+                document.getElementById("textnhap").value="";
+                n="";
+            }
+        }
+        document.getElementById("textnhap").value=n;
+        n="";
+   }
+    </script>
+  </body>
+</html>

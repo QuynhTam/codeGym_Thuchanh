@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arr = [1, "quynh", 5, 6, 7, "anh", "yeu", 3, "sau"];
+      let count = 0;
+      let b = [];
+      for (let i = 0; i < arr.length; i++) {
+        if (!isNaN(arr[i])) {
+          //   document.write(arr[i] + " ");
+          b += arr[i] + " ";
+          count++;
+        }
+      }
+      document.write("Các kí tự số trong mảng là : " + b);
+
+      document.write("<br/>Có " + count + " kí tự số trong mảng");
+    </script>
+  </body>
+</html>

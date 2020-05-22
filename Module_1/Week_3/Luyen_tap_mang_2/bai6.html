@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arrChart = ["anh", "yeu", "-", "-", "em", "rat", "-", "nhieu"];
+      document.write("Mảng trước " + arrChart);
+      for (let i = 0; i < arrChart.length; i++) {
+        if (arrChart[i] == "-") arrChart[i] = "_";
+      }
+      document.write("<br>Mảng sau : " + arrChart);
+    </script>
+  </body>
+</html>

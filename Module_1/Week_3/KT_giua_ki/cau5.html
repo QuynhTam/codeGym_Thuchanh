@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let input = parseInt(prompt("Nhập kích thước của mảng : "));
+      let arrMatrix = new Array(input);
+      for (let i = 0; i < arrMatrix.length; i++) {
+        arrMatrix[i] = new Array(input);
+        for (let j = 0; j < arrMatrix.length; j++) {
+          arrMatrix[i][j] = Math.floor(Math.random() * 100 + 1);
+        }
+        document.write(arrMatrix[i] + "<br>");
+      }
+      function sum(arr) {
+        let sum = 0;
+        for (let i = 0; i < arr.length; i++) {
+          for (let j = 0; j < arr.length; j++) {
+            if (i == j) {
+              sum += arr[i][j];
+            }
+          }
+        }
+        return sum;
+      }
+      document.write("Tổng đường chéo chính của Matrix vuông là : " + sum(arrMatrix));
+    </script>
+  </body>
+</html>

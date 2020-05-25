@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hiển thị n số nguyên tố</h1>
+    <input id="input" type="text" />
+    <input type="button" value="Show" onclick="showPrime()" />
+    <div id="output"></div>
+    <script>
+      function showPrime() {
+        let dem = 0;
+        let n = 2;
+        let a = document.getElementById("input").value;
+        while (dem < a) {
+          if (checkPrimeNumber(n)) {
+            document.getElementById("output").innerHTML += n + " ";
+            dem++;
+          }
+          n++;
+        }
+      }
+      function checkPrimeNumber(n) {
+        isPrime = true;
+        for (let i = 2; i < n; i++) {
+          if (n % i == 0) {
+            isPrime = false;
+            break;
+          }
+        }
+        if (isPrime) return n;
+      }
+    </script>
+  </body>
+</html>

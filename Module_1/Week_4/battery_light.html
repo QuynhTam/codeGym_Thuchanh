@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let Battery = function () {
+        this.setEnergy = function (energy) {
+          this.energy = energy;
+        };
+        this.getEnerry = function () {
+          return this.energy;
+        };
+        this.decreaseEnergy = function () {
+          if (this.energy > 0) {
+            this.energy--;
+          }
+        };
+      };
+      let LightBattery = function () {
+        this.setBattery = function (battery) {
+          this.battery = battery;
+        };
+        this.getBatteryInfo = function () {
+          return this.battery.getEnerry();
+        };
+        this.light = function () {
+          if (this.status) {
+            alert("Lighting");
+          } else {
+            alert("Not lighting");
+          }
+        };
+        this.turnOn = function () {
+          this.status = true;
+        };
+        this.turuOff = function () {
+          this.status = false;
+        };
+      };
+      let Pin = new Battery();
+      Pin.setEnergy(0);
+      let light = new LightBattery();
+      light.setBattery(Pin);
+      document.write("Battery info:" + light.getBatteryInfo() + "<br/>");
+      light.light();
+
+      document.write("Turn on<br/>");
+      light.turnOn();
+      light.light();
+      document.write("Battery info:" + light.getBatteryInfo() + "<br/>");
+
+      document.write("Turn off<br/>");
+      light.turnOff();
+      light.light();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 1000px;
+      }
+      tr:nth-child(odd) {
+        background-color: yellowgreen;
+      }
+      td,
+      th {
+        border: 1px solid gray;
+        text-align: left;
+        padding: 8px; /*thêm vào khoảng không cho thành phần*/
+      }
+      body {
+        padding: 0px;
+        margin: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="label"><h1>Add New Product</h1></div>
+    <div id="inputProduct">
+      <input id="addProduct" type="text" placeholder="Nhập sản Phẩm" />
+      <input id="addProductPrice" type="text" placeholder="Giá sản Phẩm" />
+      <input type="button" value="Add Product" onclick="addProduct()" />
+      <hr />
+      <div id="kq"></div>
+    </div>
+    <script>
+      window.onload = function () {
+        loadProduct();
+      };
+      let Production = function (productName, productPrice) {
+        this.productName = productName;
+        this.productPrice = productPrice;
+        this.getProductName = function () {
+          return this.productName;
+        };
+        this.getProductPrice = function () {
+          return this.ProductPrice;
+        };
+      };
+      let ProductionArr = new Array();
+      function addProduct() {
+        let product_name = document.getElementById("addProduct").value;
+        let product_price = document.getElementById("addProductPrice").value;
+        if (product_name == "" || product_price == "") {
+          alert("Sản phẩm hoặc giá không thể trống !");
+        } else {
+          let newProduct = new Production(product_name, product_price);
+          ProductionArr.push(newProduct);
+          document.getElementById("addProduct").value = "";
+          document.getElementById("addProductPrice").value = "";
+        }
+        loadProduct(Production);
+      }
+      function loadProduct() {
+        let result = "";
+        result +=
+          "<table>" +
+          "<tr>" +
+          "<th>STT</th>" +
+          "<th>Product Name </th>" +
+          "<th>Product Price </th>" +
+          "</tr>";
+        for (let i = 0; i < ProductionArr.length; i++) {
+          result +=
+            "<tr><td>" +
+            (i + 1) +
+            "</td><td>" +
+            ProductionArr[i].getProductPrice() +
+            "</td><td>" +
+            ProductionArr[i].getProductName() +
+            "</td>";
+        }
+        result += "</table>";
+        document.getElementById("kq").innerHTML = result;
+      }
+    </script>
+  </body>
+</html>

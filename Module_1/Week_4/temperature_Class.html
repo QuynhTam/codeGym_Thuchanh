@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let Temperature = function (Temperature_C) {
+        this.Temperature_C = Temperature_C;
+        this.getTemperature_F = function () {
+          return this.Temperature_C * 1.8 + 32;
+        };
+        this.getTemperature_K = function () {
+          return this.Temperature_C + 273.15;
+        };
+      };
+      let temperature = new Temperature(10);
+      alert("Độ F = " + temperature.getTemperature_F());
+      alert("Độ K = " + temperature.getTemperature_K());
+    </script>
+  </body>
+</html>

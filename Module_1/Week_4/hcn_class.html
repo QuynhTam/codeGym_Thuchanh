@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas
+      id="canvas"
+      height="400"
+      width="400"
+      style="border: 1px solid crimson;"
+    ></canvas>
+    <script>
+      let hinhChuNhat = function (weight, height) {
+        this.weight = weight;
+        this.height = height;
+        this.getArea = function () {
+          return this.height * this.weight;
+        };
+        this.getPrimeter = function () {
+          return 2 * (this.height + this.weight);
+        };
+        this.setWeight = function (weight) {
+          this.weight = weight;
+        };
+        this.setHeight = function (height) {
+          this.height = height;
+        };
+        this.getCanvas = function () {
+          let c = document.getElementById("canvas");
+          let ctx = c.getContext("2d");
+          ctx.fillStyle = "blue";
+          ctx.fillRect(20, 20, this.height, this.weight);
+        };
+      };
+      let rectangle = new hinhChuNhat(100, 200);
+      alert("CV " + rectangle.getPrimeter() + " DT " + rectangle.getArea());
+      rectangle.getCanvas();
+     
+    </script>
+  </body>
+</html>
